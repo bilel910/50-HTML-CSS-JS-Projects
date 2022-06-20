@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  background-image: linear-gradient(90deg, #7d5fff, #7158e2);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  position: relative;
+  height: 50px;
+}
+
+.btn:focus,
+.search__bar:focus {
+  outline: none;
+}
+
+.search__bar {
+  height: 50px;
+  width: 50px;
+  padding: 1rem;
+  transition: width 0.3s ease;
+  border: 0;
+  font-size: 18px;
+}
+
+.btn {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.content.active .search__bar {
+  width: 200px;
+}
+
+.content.active .btn {
+  transform: translateX(198px);
+}
